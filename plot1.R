@@ -1,4 +1,5 @@
-
+#This code assumes that the files have been downloaded and unzipped into
+#the working directory.
 
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
