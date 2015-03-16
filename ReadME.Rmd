@@ -1,0 +1,10 @@
+---
+title: "Exploratory Data Analysis: Peer assessment 2 ReadME"
+output: html_document
+---
+
+This project uses data from the National Emissions Inventory (NEI) database, 
+released by the Environmental Protection Agency (EPA), which reports the number 
+of tons of fine particulate matter (PM2.5) emitted by a given source over the 
+course of a given year. This assignment focuses in particular on data for 1999, 
+2002, 2005, and 2008.
