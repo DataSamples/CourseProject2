@@ -1,5 +1,5 @@
 ---
-title: "Exploratory Data Analysis: Peer assessment 2 ReadME"
+title: "Exploratory Data Analysis: Peer assessment 2-ReadME"
 output: html_document
 ---
 
@@ -8,3 +8,14 @@ released by the Environmental Protection Agency (EPA), which reports the number
 of tons of fine particulate matter (PM2.5) emitted by a given source over the 
 course of a given year. This assignment focuses in particular on data for 1999, 
 2002, 2005, and 2008.
+
+##Loading and pre-processing data
+The data was downloaded and unzipped.
+
+The data itself is located in summarySCC_PM25.rds.
+
+The codebook for the data is locaed in Source_Classification_Code.rds.
+
+The files were read into r using readRDS().
+
+The plots and r codes for each plot are saved as six separate files, one for each question. Each r file contains code to read the data in, although the data was only read in once for the purpose of the actual assignment.
