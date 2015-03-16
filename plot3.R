@@ -9,6 +9,10 @@ BmorebyYearType <- NEI[fips == "24510"][, sum(Emissions), by = list(year, type)]
 setnames(BmorebyYearType, old = c("year", "V1"), new = c("Year", "Emissions"))
 
 png("plot3.png", height = 480, width = 480)
-qplot(Year, Emissions, data = BmorebyYearType, facets = type~., color = type, geom = c("line", "point"))
+plot <- qplot(Year, Emissions, data = BmorebyYearType, color = type, geom = c("line", "point"))
+plot <- plot + facet_wrap(~type, ncol = 2)
 
 dev.off()
+
+
+#As the plots show,
