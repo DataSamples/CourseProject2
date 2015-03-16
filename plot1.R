@@ -1,7 +1,11 @@
-#setwd("F:/Data_Science_Coursera/Exploratory_Data_Analysis/CourseProject2")
-#download.file(url = "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2FNEI_data.zip", destfile = "NEI_data.zip")
-#unzip(zipfile = "NEI_data.zip", exdir = ".")
-#file.remove("NEI_data.zip")
+
 
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
+NEI <- data.table(NEI)
+
+sumsbyYear <- NEI[, sum(Emissions), by = year]
+png("plot1.png", height = 480, width = 480)
+plot(sumsbyYear, type = "b", xlab = "Year", ylab = "Total Emissions", main = "Total Emissions for the years 1999, 2002, 2005, 2008", xaxt = "n")
+axis(side = 1, at = sumsbyYear$year, labels = TRUE)
+dev.off()
