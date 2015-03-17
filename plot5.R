@@ -4,9 +4,9 @@
 #Motor vehicle related sources are defined as those for which the SCC.Level.Three
 #contains the phrase motor vehicle.
 
-#NEI <- readRDS("summarySCC_PM25.rds")
-#SCC <- readRDS("Source_Classification_Code.rds")
-#NEI <- data.table(NEI)
+NEI <- readRDS("summarySCC_PM25.rds")
+SCC <- readRDS("Source_Classification_Code.rds")
+NEI <- data.table(NEI)
 
 motor <- SCC[grep(pattern = "veh", SCC.Level.Three, ignore.case = TRUE)]
 motorSCC <- motor$SCC

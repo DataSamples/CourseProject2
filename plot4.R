@@ -4,9 +4,9 @@
 #Coal-combustion related sources are defined as those for which the EI.Sector,
 #or emission inventory sector, contains the word coal.
 
-#NEI <- readRDS("summarySCC_PM25.rds")
-#SCC <- readRDS("Source_Classification_Code.rds")
-#NEI <- data.table(NEI)
+NEI <- readRDS("summarySCC_PM25.rds")
+SCC <- readRDS("Source_Classification_Code.rds")
+NEI <- data.table(NEI)
 
 coal <- SCC[grep(pattern = "coal", EI.Sector, ignore.case = TRUE)]
 coalSCC <- coal$SCC

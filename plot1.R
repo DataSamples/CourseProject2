@@ -1,9 +1,9 @@
 #This code assumes that the files have been downloaded and unzipped into
 #the working directory.
 
-#NEI <- readRDS("summarySCC_PM25.rds")
-#SCC <- readRDS("Source_Classification_Code.rds")
-#NEI <- data.table(NEI)
+NEI <- readRDS("summarySCC_PM25.rds")
+SCC <- readRDS("Source_Classification_Code.rds")
+NEI <- data.table(NEI)
 
 sumsbyYear <- NEI[, sum(Emissions), by = year]
 png("plot1.png", height = 480, width = 480)
